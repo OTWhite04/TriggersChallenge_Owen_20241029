@@ -2,17 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Triggers : MonoBehaviour
+public class TriggerSetActive : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject Light;
+    public GameObject Disappear;
+    public GameObject Animation;
+
+    void OnTriggerEnter(Collider other)
     {
-        
+        Light.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerExit(Collider other)
     {
-        
+        Light.SetActive(true);
     }
 }
